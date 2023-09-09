@@ -1,0 +1,8 @@
+@use "../../index";
+.nav {
+  &__mini {
+    &-brand {
+      box-shadow: var(--shadow-navbar-brand);
+    }
+  }
+}

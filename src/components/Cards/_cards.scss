@@ -1,0 +1,108 @@
+@use "../../index";
+
+// %img-container {
+//   width: 100%;
+//   height: 21rem;
+//   @extend %JC;
+//   // clip-path: circle(62.8% at 50% 100%);
+// }
+// // border-radius: 50% 50% 0% 0% / 40% 40% 0% 0%;
+// %img-inside-container {
+//   // border-radius: 1.5rem 1.5rem 0 0;
+//   width: calc(100% - 0.7rem);
+//   height: calc(100% - 0.7rem);
+//   object-fit: cover;
+// }
+// %text-container {
+//   flex: 1;
+//   padding: 1rem;
+//   font-size: 2rem;
+//   font-weight: bold;
+//   color: var(--color-white);
+// }
+.notification {
+  &-card {
+    transition: all 0.3s;
+    &:hover {
+      box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
+    }
+  }
+  &-text {
+    font-size: 1.2rem;
+    height: 90%;
+    & > * {
+      -webkit-line-clamp: 2;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      white-space: initial;
+      line-height: 1.3rem;
+    }
+  }
+  &-title {
+    width: 100%;
+  }
+  &-date {
+    width: 100%;
+  }
+  &-image {
+    border: 1px solid black;
+  }
+}
+
+.img-container-with-shadow {
+  box-shadow: var(--shadow-category-card);
+}
+.restaurant-img-container {
+  box-shadow: var(--shadow-restaurant-card);
+}
+
+.progress-shadow {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25),
+    inset 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+.card-with-clip {
+  clip-path: ellipse(58% 60% at 50% 68%);
+  // box-shadow: inset 1px 40px 9px black;
+}
+.card-with-clip-bt {
+  clip-path: ellipse(60% 60% at 50% 35%);
+  // box-shadow: inset 1px 40px 9px black;
+}
+.card-with-clip-l {
+  clip-path: ellipse(59% 70% at 60% 50%);
+}
+.card-with-clip-to-l {
+  clip-path: ellipse(59% 89% at 40% 50%);
+}
+.lines-2 {
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+// .shadow-for-clip {
+// }
+// .sale-category-card {
+//   height: 28rem;
+
+//   // overflow: hidden;
+//   // .img-container {
+//   //   @extend %img-container;
+
+//   //   img {
+//   //     @extend %img-inside-container;
+//   //   }
+//   // }
+//   // .text-container {
+//   //   box-shadow: inset var(--shadow-category-card);
+//   //   @extend %text-container;
+//   // }
+// }
+
+// .clamp {
+//   -webkit-line-clamp: 1;
+//   line-clamp: 1;
+// }

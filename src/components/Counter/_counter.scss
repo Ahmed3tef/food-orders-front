@@ -1,0 +1,29 @@
+@use "../../index";
+.actions {
+  display: flex;
+  span:not(:last-child) {
+    margin-inline-end: 0.3rem;
+  }
+  & > * {
+    // @apply border-[lightGreen];
+    @extend %JC;
+    width: 3.3rem;
+    height: 3rem;
+    border: 1px solid lightseagreen;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 1.7rem;
+  }
+  .number {
+    font-family: "Roboto";
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .add-count {
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+  }
+  .decrease-count {
+    border-radius: 5px 0 0 5px;
+    cursor: pointer;
+  }
+}
